@@ -126,4 +126,6 @@ if(MSVC AND protobuf_BUILD_SHARED_LIBS)
 endif()
 set_target_properties(libprotobuf PROPERTIES
     OUTPUT_NAME ${LIB_PREFIX}protobuf
-    DEBUG_POSTFIX "${protobuf_DEBUG_POSTFIX}")
+    SOVERSION ${protobuf_SOVERSION}
+    #DEBUG_POSTFIX "${protobuf_DEBUG_POSTFIX}"
+    )

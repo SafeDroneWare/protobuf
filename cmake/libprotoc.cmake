@@ -225,4 +225,6 @@ endif()
 set_target_properties(libprotoc PROPERTIES
     COMPILE_DEFINITIONS LIBPROTOC_EXPORTS
     OUTPUT_NAME ${LIB_PREFIX}protoc
-    DEBUG_POSTFIX "${protobuf_DEBUG_POSTFIX}")
+    SOVERSION ${protobuf_SOVERSION}
+    #DEBUG_POSTFIX "${protobuf_DEBUG_POSTFIX}"
+    )

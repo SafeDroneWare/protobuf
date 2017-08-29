@@ -32,7 +32,7 @@ foreach(_extract_string ${_extract_strings})
   string(REPLACE "\\" "/" _header ${_header})
   get_filename_component(_extract_from "${protobuf_SOURCE_DIR}/../src/${_header}" ABSOLUTE)
   get_filename_component(_extract_name ${_header} NAME)
-  get_filename_component(_extract_to "${CMAKE_INSTALL_INCLUDEDIR}/${_header}" PATH)
+  get_filename_component(_extract_to "${CMAKE_INSTALL_INCLUDEDIR}/protobuf-3.4.0/${_header}" PATH)
   if(EXISTS "${_extract_from}")
     install(FILES "${_extract_from}"
       DESTINATION "${_extract_to}"
@@ -72,7 +72,7 @@ foreach(_file ${nobase_dist_proto_DATA})
   get_filename_component(_file_path ${_file} PATH)
   if(EXISTS "${_file_from}")
     install(FILES "${_file_from}"
-      DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${_file_path}"
+      DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/protobuf-3.4.0/${_file_path}"
       COMPONENT protobuf-protos
       RENAME "${_file_name}")
   else()
