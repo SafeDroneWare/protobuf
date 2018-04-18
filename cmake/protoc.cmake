@@ -4,3 +4,6 @@ set(protoc_files
 
 add_executable(protoc ${protoc_files})
 target_link_libraries(protoc libprotobuf libprotoc)
+set_target_properties(protoc PROPERTIES
+  OUTPUT_NAME protoc-${protobuf_VERSION}
+)
